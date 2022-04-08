@@ -6,12 +6,12 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 const mrntz: Marantz = new Marantz();
 
 /**
- * @method - PUT
+ * @method - POST
  * @param - /power_off
  * @description - Turns off the Marantz
  */
 
-Router.put('/power_off', async (req, res) => {
+Router.post('/power_off', async (req, res) => {
   try {
     await mrntz.powerOff();
 
@@ -28,12 +28,12 @@ Router.put('/power_off', async (req, res) => {
 });
 
 /**
- * @method - PUT
+ * @method - POST
  * @param - /power_on
  * @description - Turns on the Marantz
  */
 
-Router.put('/power_on', async (req, res) => {
+Router.post('/power_on', async (req, res) => {
   try {
     await mrntz.powerOn();
 
@@ -50,12 +50,12 @@ Router.put('/power_on', async (req, res) => {
 });
 
 /**
- * @method - PUT
+ * @method - POST
  * @param - /increase_volume
  * @description - Increases the volume on the Marantz
  */
 
-Router.put('/increase_volume', async (req, res) => {
+Router.post('/increase_volume', async (req, res) => {
   try {
     await mrntz.increaseVolume();
 
@@ -72,12 +72,12 @@ Router.put('/increase_volume', async (req, res) => {
 });
 
 /**
- * @method - PUT
+ * @method - POST
  * @param - /decrease_volume
  * @description - Decreases the volume on the Marantz
  */
 
-Router.put('/decrease_volume', async (req, res) => {
+Router.post('/decrease_volume', async (req, res) => {
   try {
     await mrntz.decreaseVolume();
 
@@ -94,12 +94,12 @@ Router.put('/decrease_volume', async (req, res) => {
 });
 
 /**
- * @method - PUT
+ * @method - POST
  * @param - /toggle_mute
  * @description - Mutes/unmutes the sound on the Marantz
  */
 
-Router.put('/toggle_mute', async (req, res) => {
+Router.post('/toggle_mute', async (req, res) => {
   try {
     await mrntz.toggleMute();
 
